@@ -1,0 +1,41 @@
+{
+  "name": "sylvias-soundboard",
+  "version": "0.0.1",
+  "description": "Sound Board online!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js"
+  },
+  "author": "Sylvia Makuch",
+  "dependencies": {
+    "@fontsource/poppins": "^4.5.0",
+    "@fontsource/rock-salt": "^4.5.0",
+    "@fontsource/shadows-into-light": "^4.5.0",
+    "@fontsource/yeseva-one": "^4.5.0",
+    "@types/styled-components": "^5.1.15",
+    "chart.js": "^3.6.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@babel/runtime": "^7.16.0",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.4.4",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}
