@@ -9,36 +9,36 @@ import puertoricobeat from "./../sounds/beats/puertoricobeat.mp3";
 
 export const Beatsdata = [
     {
-        name: '140 bpm Beat',
+        title: '140 bpm Beat',
         src: beatloop
     },
     {
-        name: 'Break Bass ',
+        title: 'Break Bass ',
         src: breakbassloop
     },
     {
-        name: ' DnB Beat Loop',
+        title: ' DnB Beat Loop',
         src: dnbloop
     },
     {
-        name: 'Funky Beat',
+        title: 'Funky Beat',
         src: funkybeats
 
     },
     {
-        name: 'Heavt Beat',
+        title: 'Heavt Beat',
         src: heavybreaker
     },
     {
-        name: 'Hip-Hop Beat',
+        title: 'Hip-Hop Beat',
         src: hiphopbeat
     },
     {
-        name: 'Mega Drum Beat',
+        title: 'Mega Drum Beat',
         src: megadrumbeat
     },
     {
-        name: 'Pureto Rico Beat',
+        title: 'Pureto Rico Beat',
         src: puertoricobeat
     },
 ];

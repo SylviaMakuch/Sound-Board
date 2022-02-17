@@ -76,9 +76,14 @@ background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
 }
 `
 
-const AudioPlayer = ({ file }) => {
+interface AboutPlayerProperties {
+    title: String;
+    src: File;
+};
+
+const AudioPlayer = ({ title, src }: AboutPlayerProperties) => {
     const { togglePlayPause, ready, loading, playing } = useAudioPlayer({
-        src: file,
+        src,
         format: "mp3",
         autoplay: false,
         onend: () => console.log("sound has ended!")
@@ -89,6 +94,7 @@ const AudioPlayer = ({ file }) => {
 
     return (
         <div>
+            <h3>{title}</h3>
             <Button onClick={togglePlayPause}>{playing ? "Pause" : "Play"}</Button>
         </div>
     )

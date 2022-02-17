@@ -3,14 +3,12 @@ import ReactDOM from 'react-dom';
 import "@fontsource/rock-salt";
 import "@fontsource/yeseva-one";
 import "@fontsource/poppins";
-import "@fontsource/shadows-into-light";
-import { AudioPlayerProvider } from "react-use-audio-player"
+import { AudioProvider } from "./components/audioplayerprovider";
 
 
 const App = () => {
     return (
-        <AudioPlayerProvider>
-        </AudioPlayerProvider>
+       <AudioProvider></AudioProvider>
     )
 }
 ReactDOM.render(<App />, document.getElementById('react-container'));
