@@ -7,7 +7,7 @@ import hiphopbeat from "./../sounds/beats/hiphopbeat.mp3";
 import megadrumbeat from "./../sounds/beats/megadrumbeat.mp3";
 import puertoricobeat from "./../sounds/beats/puertoricobeat.mp3";
 
-export const Beatsdata = [
+export const beatsData = [
     {
         title: '140 bpm Beat',
         src: beatloop

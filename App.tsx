@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import "@fontsource/rock-salt";
 import "@fontsource/yeseva-one";
 import "@fontsource/poppins";
-import { AudioProvider } from "./components/audioplayerprovider";
+import { Howlerplayer } from "./components/howlerplayer";
 
 
 const App = () => {
     return (
-       <AudioProvider></AudioProvider>
+       <Howlerplayer />
     )
 }
 ReactDOM.render(<App />, document.getElementById('react-container'));
