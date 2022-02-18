@@ -8,7 +8,7 @@ const Container = styled.div`
 
 `;
 
-export default function BeatsContainer() {
+export default function MusicBox() {
     return (
         <Container>
             <BeatsContainer />

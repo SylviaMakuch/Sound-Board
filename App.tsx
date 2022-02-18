@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import "@fontsource/rock-salt";
 import "@fontsource/yeseva-one";
 import "@fontsource/poppins";
-import BassContainer from "./components/bass/bass";
+import MusicBox from "./components/musicbox";
 
 export default function App() {
     return (
       <div>
-          <BassContainer></BassContainer>
+          <MusicBox />
       </div>
     )
 }
