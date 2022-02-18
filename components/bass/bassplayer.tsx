@@ -1,10 +1,12 @@
-import React from "react"
+import React from "react";
 import styled from "styled-components";
-import { useAudioPlayer } from "react-use-audio-player"
+import { Howl } from 'howler';
+import { beatsData } from "./beatsconfig";
+import { useState } from "react";
 
 const Button = styled.button`
-    width: 220px;
-    height: 50px;
+    width: 200px;
+    height: 200px;
     border: none;
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
@@ -15,7 +17,7 @@ const Button = styled.button`
     position: relative;
     z-index: 0;
     border-radius: 10px;
-
+    margin:10px;
 
 &:before {
     content: '';
@@ -76,27 +78,34 @@ background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
 }
 `
 
-interface AboutPlayerProperties {
-    title: String;
-    src: File;
-};
+export const Howlerplayer = () => {
+    const [activeSound, setActiveSound] = useState(null);
 
-const AudioPlayer = ({ title, src }: AboutPlayerProperties) => {
-    const { togglePlayPause, ready, loading, playing } = useAudioPlayer({
-        src,
-        format: "mp3",
-        autoplay: false,
-        onend: () => console.log("sound has ended!")
-    })
+    const createSound = (beat: string) => {
+        return new Howl({
+            src: beat,
+            autoplay: false,
+            loop: true,
+            volume: 0.5
+        });
+    }
 
-    if (!ready && !loading) return <div>No audio to play</div>
-    if (loading) return <div>Loading audio</div>
+    const handleClick = (beat: string) => {
+        if (activeSound) {
+            activeSound.stop();
+        }
+        const newSound = createSound(beat);
+        newSound.play();
+        setActiveSound(newSound);
+    };
 
     return (
         <div>
-            <h3>{title}</h3>
-            <Button onClick={togglePlayPause}>{playing ? "Pause" : "Play"}</Button>
+            {
+                beatsData.map((beat, index: number) => {
+                    return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
+                })
+            }
         </div>
     )
 };
-export default AudioPlayer
