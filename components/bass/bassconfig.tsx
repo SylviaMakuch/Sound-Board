@@ -13,6 +13,7 @@ import rockbass from "./../../sounds/bass/rockbass.mp3";
 import subloopbass from "./../../sounds/bass/subloopbass.mp3";
 import voxbass from "./../../sounds/bass/voxbass.mp3";
 import workbass from "./../../sounds/bass/workbass.mp3";
+import yabass from "./../../sounds/bass/yabass.mp3";
 
 export const bassData = [
     {
@@ -74,5 +75,9 @@ export const bassData = [
     {
         title: 'Work Bass',
         src: workbass
+    },
+    {
+        title: 'Ya Bass',
+        src: yabass
     },
 ];

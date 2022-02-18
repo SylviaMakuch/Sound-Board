@@ -3,17 +3,13 @@ import ReactDOM from 'react-dom';
 import "@fontsource/rock-salt";
 import "@fontsource/yeseva-one";
 import "@fontsource/poppins";
-import { Beatsplayer } from "./components/beats/beatsplayer";
-import { Melodyplayer } from "./components/melody/melodyplayer";
-import { Bassplayer } from "./components/bass/bassplayer";
+import BassContainer from "./components/bass/bass";
 
-const App = () => {
+export default function App() {
     return (
-        <>
-            <Beatsplayer />
-            <Melodyplayer />
-            <Bassplayer />
-        </>
+      <div>
+          <BassContainer></BassContainer>
+      </div>
     )
 }
 ReactDOM.render(<App />, document.getElementById('react-container'));

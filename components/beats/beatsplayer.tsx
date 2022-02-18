@@ -5,8 +5,8 @@ import { beatsData } from "./beatsconfig";
 import { useState } from "react";
 
 const Button = styled.button`
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border: none;
     font-family: Yeseva One, sans-serif;
     font-size: 10px;
@@ -17,7 +17,7 @@ const Button = styled.button`
     position: relative;
     z-index: 0;
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
 
 &:before {
     content: '';
