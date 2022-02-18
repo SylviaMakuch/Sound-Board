@@ -5,11 +5,11 @@ import { beatsData } from "./beatsconfig";
 import { useState } from "react";
 
 const Button = styled.button`
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border: none;
     font-family: Yeseva One, sans-serif;
-    font-size: 30px;
+    font-size: 10px;
     outline: none;
     color: #e13b91;
     /* background: #111; */
