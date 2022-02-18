@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { Howl } from 'howler';
-import { beatsData } from "./bassconfig";
 import { useState } from "react";
+import { bassData } from "./bassconfig";
 
 const Button = styled.button`
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border: none;
     font-family: Yeseva One, sans-serif;
-    font-size: 30px;
+    font-size: 10px;
     outline: none;
     color: #e13b91;
     /* background: #111; */
@@ -102,7 +102,7 @@ export const Bassplayer = () => {
     return (
         <div>
             {
-                beatsData.map((beat, index: number) => {
+                bassData.map((beat, index: number) => {
                     return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
                 })
             }

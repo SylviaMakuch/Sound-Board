@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Howl } from 'howler';
-import { beatsData } from "./melodyconfig";
+import { melodyData } from "./melodyconfig";
 import { useState } from "react";
 
 const Button = styled.button`
@@ -102,7 +102,7 @@ export const Melodyplayer = () => {
     return (
         <div>
             {
-                beatsData.map((beat, index: number) => {
+                melodyData.map((beat, index: number) => {
                     return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
                 })
             }

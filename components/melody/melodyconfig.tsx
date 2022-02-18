@@ -1,18 +1,17 @@
-import clunkyguitarmelody from "./../sounds/beats/clunkyguitarmelody.mp3";
-import gonecrazymelody from "./../sounds/beats/gonecrazymelody.mp3";
-import hipbreakerloop from "./../sounds/beats/hipbreakerloop.mp3";
-import hiphopmelody from "./../sounds/beats/hiphopmelody.mp3";
-import heavybreaker from "./../sounds/beats/heavybreaker.mp3";
-import islandmelody from "./../sounds/beats/islandmelody.mp3";
-import japanmelody from "./../sounds/beats/japanmelody.mp3";
-import lyricalmelody from "./../sounds/beats/lyricalmelody.mp3";
-import marimbamelody from "./../sounds/beats/marimbamelody.mp3";
-import pianopopmelody from "./../sounds/beats/pianopopmelody.mp3";
-import rnbmelody from "./../sounds/beats/rnbmelody.mp3";
-import sadarpmelody from "./../sounds/beats/sadarpmelody.mp3";
-import spaceharpmelody from "./../sounds/beats/spaceharpmelody.mp3";
+import clunkyguitarmelody from "./../../sounds/melody/clunkyguitarmelody.mp3";
+import gonecrazymelody from "./../../sounds/melody/gonecrazymelody.mp3";
+import hipbreakerloop from "./../../sounds/melody/hipbreakerloop.mp3";
+import hiphopmelody from "./../../sounds/melody/hiphopmelody.mp3";
+import islandmelody from "./../../sounds/melody/islandmelody.mp3";
+import japanmelody from "./../../sounds/melody/japanmelody.mp3";
+import lyricalmelody from "./../../sounds/melody/lyricalmelody.mp3";
+import marimbamelody from "./../../sounds/melody/marimbamelody.mp3";
+import pianopopmelody from "./../../sounds/melody/pianopopmelody.mp3";
+import rnbmelody from "./../../sounds/melody/rnbmelody.mp3";
+import sadarpmelody from "./../../sounds/melody/sadarpmelody.mp3";
+import spaceharpmelody from "./../../sounds/melody/spaceharpmelody.mp3";
 
-export const beatsData = [
+export const melodyData = [
     {
         title: 'Clunky Guitar Melody',
         src: clunkyguitarmelody
@@ -29,10 +28,6 @@ export const beatsData = [
         title: 'Hip-Hop Melody',
         src: hiphopmelody
 
-    },
-    {
-        title: 'Heavt Beat',
-        src: heavybreaker
     },
     {
         title: 'Island Melody',
