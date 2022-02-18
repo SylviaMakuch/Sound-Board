@@ -5,15 +5,15 @@ import MelodyContainer from "./melody/melody";
 import BeatsContainer from "./beats/beats";
 
 const Container = styled.div`
-
+    display:flex;
 `;
 
 export default function MusicBox() {
     return (
         <Container>
+            <MelodyContainer />
             <BeatsContainer />
             <BassContainer />
-            <MelodyContainer />
         </Container>
     )
 };

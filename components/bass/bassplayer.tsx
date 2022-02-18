@@ -5,8 +5,8 @@ import { useState } from "react";
 import { bassData } from "./bassconfig";
 
 const Button = styled.button`
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border: none;
     font-family: Yeseva One, sans-serif;
     font-size: 10px;

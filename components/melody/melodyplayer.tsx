@@ -5,14 +5,14 @@ import { melodyData } from "./melodyconfig";
 import { useState } from "react";
 
 const Button = styled.button`
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border: none;
     font-family: Yeseva One, sans-serif;
     font-size: 10px;
     outline: none;
     color: #e13b91;
-    /* background: #111; */
+    background: #111;
     cursor: pointer;
     position: relative;
     z-index: 0;
