@@ -1,44 +1,78 @@
-import beatloop from "./../sounds/beats/beatloop.mp3";
-import breakbassloop from "./../sounds/beats/breakbassloop.mp3";
-import dnbloop from "./../sounds/beats/dnbloop.mp3";
-import funkybeats from "./../sounds/beats/funkybeats.mp3";
-import heavybreaker from "./../sounds/beats/heavybreaker.mp3";
-import hiphopbeat from "./../sounds/beats/hiphopbeat.mp3";
-import megadrumbeat from "./../sounds/beats/megadrumbeat.mp3";
-import puertoricobeat from "./../sounds/beats/puertoricobeat.mp3";
+import asainflute from "./../sounds/bass/asainflute.mp3";
+import bassloop from "./../sounds/bass/asainflute.mp3";
+import bouncybass from "./../sounds/bass/bouncybass.mp3";
+import clubbass from "./../sounds/bass/clubbass.mp3";
+import dripping from "./../sounds/bass/dripping.mp3";
+import dsbass from "./../sounds/bass/dsbass.mp3";
+import eurobass from "./../sounds/bass/eurobass.mp3";
+import grandorchestra from "./../sounds/bass/grandorchestra.mp3";
+import hiphopbass from "./../sounds/bass/hiphopbass.mp3";
+import kissbass from "./../sounds/bass/kissbass.mp3";
+import rnbbass from "./../sounds/bass/rnbbass.mp3";
+import rockbass from "./../sounds/bass/rockbass.mp3";
+import subloopbass from "./../sounds/bass/subloopbass.mp3";
+import voxbass from "./../sounds/bass/voxbass.mp3";
+import workbass from "./../sounds/bass/workbass.mp3";
 
 export const beatsData = [
     {
-        title: '140 bpm Beat',
-        src: beatloop
+        title: 'Asain Flute',
+        src: asainflute
     },
     {
-        title: 'Break Bass ',
-        src: breakbassloop
+        title: 'Deep Bass Loop ',
+        src: bassloop
     },
     {
-        title: ' DnB Beat Loop',
-        src: dnbloop
+        title: ' Bouncy Bass',
+        src: bouncybass
     },
     {
-        title: 'Funky Beat',
-        src: funkybeats
+        title: 'Club Bass',
+        src: clubbass
 
     },
     {
-        title: 'Heavt Beat',
-        src: heavybreaker
+        title: 'Dripping Bass',
+        src: dripping
     },
     {
-        title: 'Hip-Hop Beat',
-        src: hiphopbeat
+        title: 'Deep South Bass',
+        src: dsbass
     },
     {
-        title: 'Mega Drum Beat',
-        src: megadrumbeat
+        title: 'Euro Bass',
+        src: eurobass
     },
     {
-        title: 'Pureto Rico Beat',
-        src: puertoricobeat
+        title: 'Grand Orchestra',
+        src: grandorchestra
+    },
+    {
+        title: 'Hip Hop Bass',
+        src: hiphopbass
+    },
+    {
+        title: 'Kiss Bass',
+        src: kissbass
+    },
+    {
+        title: 'RnB Bass',
+        src: rnbbass
+    }, {
+        title: 'Rock Bass',
+        src: rockbass
+    },
+    {
+        title: 'Sub Loop Bass',
+        src: subloopbass
+    },
+    {
+        title: 'Vox Bass',
+        src: voxbass
+    },
+    {
+        title: 'Work Bass',
+        src: workbass
     },
 ];

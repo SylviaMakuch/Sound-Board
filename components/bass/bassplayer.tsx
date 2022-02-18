@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Howl } from 'howler';
-import { beatsData } from "./beatsconfig";
+import { beatsData } from "./bassconfig";
 import { useState } from "react";
 
 const Button = styled.button`
@@ -17,7 +17,7 @@ const Button = styled.button`
     position: relative;
     z-index: 0;
     border-radius: 10px;
-    margin:10px;
+    margin: 10px;
 
 &:before {
     content: '';
@@ -78,7 +78,7 @@ background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
 }
 `
 
-export const Howlerplayer = () => {
+export const Bassplayer = () => {
     const [activeSound, setActiveSound] = useState(null);
 
     const createSound = (beat: string) => {
