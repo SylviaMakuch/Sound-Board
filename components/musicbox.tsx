@@ -19,7 +19,7 @@ const Title = styled.div`
    font-size: 35px; 
    transform: rotate(-15deg);
    position: relative;
-    top: 600px;
+    top: 300px;
     left: 104px;
 
 `;
