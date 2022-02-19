@@ -4,21 +4,24 @@ import { Howl } from 'howler';
 import { useState } from "react";
 import { bassData } from "./bassconfig";
 
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+`;
+
 const Button = styled.button`
-    width: 80px;
     height: 80px;
-    border: none;
-    font-family: Yeseva One, sans-serif;
-    font-size: 10px;
-    outline: none;
-    color: #e13b91;
-    /* background: #111; */
+    width: 80px;
+    margin: 0px 5px;
+    background: #111;
+    color: #e13b91; 
+    font-family: poppins, sans serif;
+    border-radius: 10px;
     cursor: pointer;
     position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    margin: 10px;
-
+   
 &:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
@@ -76,7 +79,7 @@ background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
     transition: opacity .3s ease-in-out;
     border-radius: 5px;
 }
-`
+`;
 
 export const Bassplayer = () => {
     const [activeSound, setActiveSound] = useState(null);
@@ -100,12 +103,12 @@ export const Bassplayer = () => {
     };
 
     return (
-        <div>
+        <Container>
             {
                 bassData.map((beat, index: number) => {
                     return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
                 })
             }
-        </div>
+        </Container>
     )
 };

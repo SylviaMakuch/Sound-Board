@@ -5,21 +5,22 @@ import { beatsData } from "./beatsconfig";
 import { useState } from "react";
 
 const Button = styled.button`
-    width: 80px;
     height: 80px;
-    border: none;
-    font-family: Yeseva One, sans-serif;
-    font-size: 10px;
-    outline: none;
-    color: #e13b91;
+    width: 80px;
+    margin: 0px 5px;
     background: #111;
-    cursor: pointer;
-    z-index: 0;
+    color: #e13b91; 
+    font-family: poppins, sans serif;
     border-radius: 10px;
-    margin: 5px;
-
+    cursor: pointer;
+    position: relative;
+   
 &:before {
+    content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -44,14 +45,23 @@ background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
 }
 
 &:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
     width: 100%;
     height: 100%;
     background: transparent;
+    left: 0;
+    top: 0;
     border-radius: 10px;
 }
 
 &.success {
+    content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);

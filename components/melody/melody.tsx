@@ -5,7 +5,7 @@ import { Melodyplayer } from "./melodyplayer";
 const Container = styled.div`
     display: flex;
     width: 250px;
-    margin-top: 20px;
+    height: 600px;
     flex-direction: column;
     align-items: center;
 `;

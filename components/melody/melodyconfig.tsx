@@ -13,52 +13,52 @@ import spaceharpmelody from "./../../sounds/melody/spaceharpmelody.mp3";
 
 export const melodyData = [
     {
-        title: 'Clunky Guitar Melody',
+        title: 'Clunky Guitar',
         src: clunkyguitarmelody
     },
     {
-        title: 'Gone Crazy Melody',
+        title: 'Gone Crazy ',
         src: gonecrazymelody
     },
     {
-        title: ' Hip Breaker Loop',
+        title: ' Hip Breaker',
         src: hipbreakerloop
     },
     {
-        title: 'Hip-Hop Melody',
+        title: 'Hip-Hop',
         src: hiphopmelody
 
     },
     {
-        title: 'Island Melody',
+        title: 'Island',
         src: islandmelody
     },
     {
-        title: 'Japan Melody',
+        title: 'Japan ',
         src: japanmelody
     },
     {
-        title: 'Lyrical Melody',
+        title: 'Lyrical ',
         src: lyricalmelody
     },
     {
-        title: 'Marimba Melody',
+        title: 'Marimba ',
         src: marimbamelody
     },
     {
-        title: 'Piano Pop Melody',
+        title: 'Piano Pop ',
         src: pianopopmelody
     },
     {
-        title: 'RnB Melody',
+        title: 'RnB ',
         src: rnbmelody
     },
     {
-        title: 'Sadar Melody',
+        title: 'Sadar ',
         src: sadarpmelody
     },
     {
-        title: 'Space Harp Melody',
+        title: 'Space Harp ',
         src: spaceharpmelody
     },
 

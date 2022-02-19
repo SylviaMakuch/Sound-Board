@@ -34,7 +34,7 @@ export const beatsData = [
         src: hiphopbeat
     },
     {
-        title: 'Mega Drum Beat',
+        title: 'Mega Drum ',
         src: megadrumbeat
     },
     {
