@@ -24,11 +24,11 @@ const Title = styled.div`
     color: #ff00e1;
 `;
 
-const Button = styled.button`
+const Button = styled.button<{ $isActive?: boolean }>`
     height: 80px;
     width: 80px;
-    margin: 0px 5px;
-    background: #111;
+    margin: 0px 5px;    
+    background: ${props => props.$isActive ? "red" : "black"};
     color: #e13b91; 
     font-family: 'Yeseva One', cursive;
     border-radius: 10px;
@@ -58,14 +58,6 @@ const Button = styled.button`
     background: linear-gradient(55deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);
 }
 
-&:focus:after {
-    background: transparent;
-}
-
-&:hover:before {
-    opacity: 1;
-}
-
 &:after {
     z-index: -1;
     content: '';
@@ -78,7 +70,7 @@ const Button = styled.button`
     border-radius: 10px;
 }
 
-&.success {
+&:success {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
