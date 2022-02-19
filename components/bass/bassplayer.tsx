@@ -5,13 +5,23 @@ import { useState } from "react";
 import { bassData } from "./bassconfig";
 
 const Container = styled.div`
+`;
+
+const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+  margin-top: 20px; 
   /* @media(max-height: 800px) {
     grid-template-columns: repeat(2, 1fr);
     } */
+`;
+
+const Title = styled.div`
+    font-family: Yeseva One, sans-serif;
+    font-size: 30px;
+    color: #ff00e1;
 `;
 
 const Button = styled.button`
@@ -86,7 +96,7 @@ const Button = styled.button`
 }
 `;
 
-export const Bassplayer = () => {
+export default function BassPlayer() {
     const [activeSound, setActiveSound] = useState(null);
 
     const createSound = (beat: string) => {
@@ -109,11 +119,15 @@ export const Bassplayer = () => {
 
     return (
         <Container>
-            {
-                bassData.map((beat, index: number) => {
-                    return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
-                })
-            }
+            <Title>Bass</Title>
+            <Grid>
+                {
+                    bassData.map((beat, index: number) => {
+                        return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
+                    })
+                }
+            </Grid>
         </Container>
+
     )
 };

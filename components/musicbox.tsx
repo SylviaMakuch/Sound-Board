@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import BassContainer from "./bass/bass";
-import MelodyContainer from "./melody/melody";
-import BeatsContainer from "./beats/beats";
+import BassPlayer from "./bass/bassplayer";
+import Beatsplayer from "./beats/beatsplayer";
+import BeatsPlayer from "./beats/beatsplayer";
+import MelodyPlayer from "./melody/melodyplayer";
 
 const Container = styled.div`
     display: flex;
@@ -36,9 +37,9 @@ const Title = styled.div`
 export default function MusicBox() {
     return (
         <Container>
-            <MelodyContainer />
-            <BassContainer />
-            <BeatsContainer />
+            <MelodyPlayer />
+            <BassPlayer />
+            <Beatsplayer />
             <Title>Sylvia's Sound</Title>
         </Container>
     )

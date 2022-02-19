@@ -5,6 +5,9 @@ import { melodyData } from "./melodyconfig";
 import { useState } from "react";
 
 const Container = styled.div`
+`;
+
+const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -14,6 +17,12 @@ const Container = styled.div`
 /* @media(max-height: 800px) {
     grid-template-columns: repeat(1, 1fr);
     }   */
+`;
+
+const Title = styled.div`
+    font-family: Yeseva One, sans-serif;
+    font-size: 30px;
+    color: limegreen;
 `;
 
 const Button = styled.button`
@@ -86,7 +95,7 @@ color: black;
 }
 `;
 
-export const Melodyplayer = () => {
+export default function MediaPlayer() {
     const [activeSound, setActiveSound] = useState(null);
 
     const createSound = (beat: string) => {
@@ -109,11 +118,14 @@ export const Melodyplayer = () => {
 
     return (
         <Container>
-            {
-                melodyData.map((beat, index: number) => {
-                    return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
-                })
-            }
+            <Title>Melody</Title>
+            <Grid>
+                {
+                    melodyData.map((beat, index: number) => {
+                        return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
+                    })
+                }
+            </Grid>
         </Container>
     )
 };

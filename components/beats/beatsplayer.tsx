@@ -5,13 +5,24 @@ import { beatsData } from "./beatsconfig";
 import { useState } from "react";
 
 const Container = styled.div`
+`;
+
+const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);  
+  margin-top: 20px;
   /* @media(max-height: 800px) {
     grid-template-columns: repeat(1, 1fr);
     } */
+`;
+
+
+const Title = styled.div`
+    font-family: 'Yeseva One', cursive;
+    font-size: 30px;
+    color: ff7300;
 `;
 
 const Button = styled.button`
@@ -85,7 +96,7 @@ background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #ff0000);
 }
 `;
 
-export const Beatsplayer = () => {
+export default function Beatsplayer() {
     const [activeSound, setActiveSound] = useState(null);
 
     const createSound = (beat: string) => {
@@ -108,11 +119,16 @@ export const Beatsplayer = () => {
 
     return (
         <Container>
-            {
-                beatsData.map((beat, index: number) => {
-                    return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
-                })
-            }
+            <Title>
+                Beats
+            </Title>
+            <Grid>
+                {
+                    beatsData.map((beat, index: number) => {
+                        return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
+                    })
+                }
+            </Grid>
         </Container>
     )
 };
