@@ -6,10 +6,11 @@ import BeatsContainer from "./beats/beats";
 
 const Container = styled.div`
     display: flex;
+    flex-direction: row-reverse;
     background-color: pink;
     width: 1100px;
     padding: 30px;
-    margin: 40px    ;
+    margin: 40px;
     box-shadow: 12px 12px 12px 12px rgba(0, 0, 255, .2);
 `;
 
@@ -20,8 +21,6 @@ const Title = styled.div`
    transform: rotate(-15deg);
    position: relative;
     top: 200px;
-    left: 90px;
-
 `;
 
 export default function MusicBox() {
