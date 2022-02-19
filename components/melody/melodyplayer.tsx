@@ -11,9 +11,9 @@ const Container = styled.div`
   grid-auto-rows: minmax(100px, auto);
   margin-top: 20px; 
   justify-items: center;
-  @media(max-height: 800px) {
+/* @media(max-height: 800px) {
     grid-template-columns: repeat(1, 1fr);
-    }
+    }   */
 `;
 
 const Button = styled.button`
@@ -93,7 +93,7 @@ export const Melodyplayer = () => {
         return new Howl({
             src: beat,
             autoplay: false,
-            loop: true,
+            loop: false,
             volume: 0.5
         });
     }

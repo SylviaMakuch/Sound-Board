@@ -12,11 +12,11 @@ const Container = styled.div`
     padding: 30px;
     margin: 40px;
     box-shadow: 12px 12px 12px 12px rgba(0, 0, 255, .2);
-    @media(max-height: 800px) {
+    /* @media(max-height: 800px) {
         width: 500px;
         flex-direction: row;
         height: 1500px;
-    }
+    } */
 `;
 
 const Title = styled.div`
@@ -25,12 +25,12 @@ const Title = styled.div`
    font-size: 35px; 
    transform: rotate(-15deg);
    position: relative;
-    top: 200px;
-    left:25px;
-    @media(max-height: 800px) {
+    top: 300px;
+    left: 50px;
+    /* @media(min-height: 800px) {
         top: 1300px;
         left:60px;
-    }
+    } */
 `;
 
 export default function MusicBox() {

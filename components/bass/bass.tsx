@@ -9,7 +9,7 @@ const Container = styled.div`
 const Title = styled.div`
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
-    color: ff00e1;
+    color: #ff00e1;
 `;
 
 export default function BassContainer() {

@@ -9,9 +9,9 @@ const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  @media(max-height: 800px) {
+  /* @media(max-height: 800px) {
     grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 `;
 
 const Button = styled.button`
@@ -24,6 +24,7 @@ const Button = styled.button`
     border-radius: 10px;
     cursor: pointer;
     position: relative;
+
    
 &:before {
     content: '';
@@ -92,7 +93,7 @@ export const Bassplayer = () => {
         return new Howl({
             src: beat,
             autoplay: false,
-            loop: true,
+            loop: false,
             volume: 0.5
         });
     }
