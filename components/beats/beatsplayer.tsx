@@ -4,13 +4,21 @@ import { Howl } from 'howler';
 import { beatsData } from "./beatsconfig";
 import { useState } from "react";
 
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);  
+  border-radius: 2px solid pink;
+`;
+
 const Button = styled.button`
     height: 80px;
     width: 80px;
     margin: 0px 5px;
     background: #111;
-    color: #e13b91; 
-    font-family: poppins, sans serif;
+    color: #ff7300; 
+    font-family: 'Yeseva One', cursive;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
@@ -33,7 +41,8 @@ const Button = styled.button`
 }
 
 &:focus {
-background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
+color: black;
+background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #ff0000);
 }
 
 &:focus:after {
@@ -96,12 +105,12 @@ export const Beatsplayer = () => {
     };
 
     return (
-        <div>
+        <Container>
             {
                 beatsData.map((beat, index: number) => {
                     return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
                 })
             }
-        </div>
+        </Container>
     )
 };

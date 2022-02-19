@@ -3,17 +3,13 @@ import styled from "styled-components";
 import { Bassplayer } from "./bassplayer";
 
 const Container = styled.div`
-    display: flex;
-    width: 350px;
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: center;
+    margin: 20px;
 `;
 
 const Title = styled.div`
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
-    color: limegreen;
+    color: ff00e1;
 `;
 
 export default function BassContainer() {

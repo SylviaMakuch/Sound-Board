@@ -3,11 +3,6 @@ import styled from "styled-components";
 import { Melodyplayer } from "./melodyplayer";
 
 const Container = styled.div`
-    display: flex;
-    width: 250px;
-    height: 600px;
-    flex-direction: column;
-    align-items: center;
 `;
 
 const Title = styled.div`

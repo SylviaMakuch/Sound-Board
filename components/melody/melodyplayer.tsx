@@ -17,15 +17,15 @@ const Button = styled.button`
     width: 80px;
     margin: 0px 5px;
     background: #111;
-    color: #e13b91; 
-    font-family: poppins, sans serif;
+    color: limegreen; 
+    font-family: 'Yeseva One', cursive;
     border-radius: 12px;
     cursor: pointer;
     position: relative;
    
 &:before {
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -41,7 +41,8 @@ const Button = styled.button`
 }
 
 &:focus {
-background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
+background: linear-gradient(45deg,  #06ff93, #fffb00, #48ff00, #00ffd5);
+color: black;
 }
 
 &:focus:after {

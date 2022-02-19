@@ -17,7 +17,7 @@ const Button = styled.button`
     margin: 0px 5px;
     background: #111;
     color: #e13b91; 
-    font-family: poppins, sans serif;
+    font-family: 'Yeseva One', cursive;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
@@ -40,7 +40,8 @@ const Button = styled.button`
 }
 
 &:focus {
-background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00);
+    color: black;
+    background: linear-gradient(55deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);
 }
 
 &:focus:after {
