@@ -15,7 +15,7 @@ const Title = styled.div`
 export default function BassContainer() {
     return (
         <Container>
-            <Bassplayer />
             <Title>Bass</Title>
+            <Bassplayer />
         </Container>)
 };

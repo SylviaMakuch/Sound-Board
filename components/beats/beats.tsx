@@ -16,10 +16,10 @@ const Title = styled.div`
 export default function BeatsContainer() {
     return (
         <Container>
-            <Beatsplayer />
             <Title>
                 Beats
             </Title>
+            <Beatsplayer />
         </Container>
     )
 };

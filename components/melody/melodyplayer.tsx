@@ -10,12 +10,15 @@ const Container = styled.div`
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   margin-top: 20px; 
+  justify-items: center;
+  @media(max-height: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 const Button = styled.button`
     height: 80px;
     width: 80px;
-    margin: 0px 5px;
     background: #111;
     color: limegreen; 
     font-family: 'Yeseva One', cursive;

@@ -14,8 +14,8 @@ const Title = styled.div`
 export default function MelodyContainer() {
     return (
         <Container>
-            <Melodyplayer />
             <Title>Melody</Title>
+            <Melodyplayer />
         </Container>
     )
 };

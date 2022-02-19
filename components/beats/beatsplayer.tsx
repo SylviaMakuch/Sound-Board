@@ -9,7 +9,9 @@ const Container = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);  
-  border-radius: 2px solid pink;
+  @media(max-height: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 const Button = styled.button`
