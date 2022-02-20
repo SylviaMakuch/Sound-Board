@@ -18,7 +18,6 @@ const Grid = styled.div`
     } */
 `;
 
-
 const Title = styled.div`
     font-family: 'Yeseva One', cursive;
     font-size: 30px;
