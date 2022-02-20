@@ -28,7 +28,7 @@ const Button = styled.button<{ $isActive?: boolean }>`
     height: 80px;
     width: 80px;
     margin: 0px 5px;    
-    background: ${props => props.$isActive ? "red" : "black"};
+    background: ${props => props.$isActive ? "linear-gradient(55deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);" : "black"};
     color: #e13b91; 
     font-family: 'Yeseva One', cursive;
     border-radius: 10px;
@@ -89,7 +89,7 @@ const Button = styled.button<{ $isActive?: boolean }>`
 export default function BassPlayer() {
     const [activeSound, setActiveSound] = useState(null);
     const [activeIndex, setActiveIndex] = useState(null);
-    const [isActive, SetIsActive] =useState(false); 
+    const [isActive, setIsActive] =useState(false); 
 
     const createSound = (beat: string) => {
         return new Howl({
@@ -101,14 +101,11 @@ export default function BassPlayer() {
     }
 
     const handleClick = (beat: string, index: number ) => {
-
+        const ButtonChange = setIsActive(!isActive);
+            
         if (activeSound) {
             activeSound.stop(); 
         }
-        if (index) {
-            SetIsActive(!isActive);
-        }
-        
 
         if (activeIndex !== index) {
             const newSound = createSound(beat);
