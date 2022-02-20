@@ -8,7 +8,7 @@ import MelodyPlayer from "./melody/melodyplayer";
 const Container = styled.div`
     display: flex;
     flex-direction: row-reverse;
-    background-color: pink;
+    background: linear-gradient(45deg, #837373, #78716a, #ffd0d0, #78716a, #000000 );
     width: 1100px;
     padding: 30px;
     margin: 40px;

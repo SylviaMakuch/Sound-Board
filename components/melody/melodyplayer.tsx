@@ -23,7 +23,7 @@ const Title = styled.div`
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
     color: #19bd19;
-    text-shadow: 1px 1px #aeffca;
+    /* text-shadow: 1px 1px #aeffca; */
     @media(max-width: 600px) {
     text-align: center; 
     }  
@@ -34,7 +34,8 @@ const Button = styled.button`
     width: 80px;
     background: #111;
     color: limegreen; 
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Roboto Serif', sans-serif;
+    font-weight: 600;
     border-radius: 12px;
     cursor: pointer;
     position: relative;

@@ -17,10 +17,6 @@ import yabass from "./../../sounds/bass/yabass.mp3";
 
 export const bassData = [
     {
-        title: 'Asain Flute',
-        src: asainflute
-    },
-    {
         title: 'Deep Bass Loop ',
         src: bassloop
     },
@@ -67,6 +63,10 @@ export const bassData = [
     {
         title: 'Sub Loop Bass',
         src: subloopbass
+    },
+    {
+        title: 'Asain Flute',
+        src: asainflute
     },
     {
         title: 'Vox Bass',

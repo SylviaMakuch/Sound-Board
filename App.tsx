@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import styled from "styled-components";
 import "@fontsource/rock-salt";
 import "@fontsource/yeseva-one";
-import "@fontsource/poppins";
 import MusicBox from "./components/musicbox";
 
 const Container = styled.div`

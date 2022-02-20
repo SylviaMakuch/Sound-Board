@@ -22,7 +22,7 @@ const Title = styled.div`
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
     color: #ff00e1;
-    text-shadow: 1px 1px #fffcf;
+        text-shadow: 1px 1px #fffcf;
     @media(max-width: 600px) {
     text-align: center; 
     }
@@ -34,7 +34,8 @@ const Button = styled.button<{ $isActive?: boolean }>`
     margin: 0px 5px;    
     background: ${props => props.$isActive ? "linear-gradient(55deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);" : "black"};
     color: #e13b91; 
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Roboto Serif', sans-serif;
+    font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
      
@@ -105,8 +106,12 @@ export default function BassPlayer() {
     }
 
     const handleClick = (beat: string, index: number ) => {
-            // setIsActive(!isActive);
-            
+
+        if (activeIndex === isActive){
+            setIsActive(!isActive);
+        }
+
+
         if (activeSound) {
             activeSound.stop(); 
         } 
@@ -124,7 +129,7 @@ export default function BassPlayer() {
             <Grid>
                 {
                     bassData.map((beat, index: number) => {
-                        return <Button key={index} $isActive={isActive} onClick={() => handleClick(beat.src, index)}>{beat.title}</Button>
+                        return <Button key={index} $isActive={activeIndex === index} onClick={() => handleClick(beat.src, index)}>{beat.title}</Button>
                     })
                 }
             </Grid>

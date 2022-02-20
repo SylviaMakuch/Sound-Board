@@ -27,17 +27,16 @@ const Title = styled.div`
     text-align: center; 
     }
 `;
-
-const Button = styled.button`
+const Button = styled.button<{ $isActive?: boolean }>`
     height: 80px;
     width: 80px;
-    margin: 0px 5px;
-    background: #111;
-    color: #ff7300; 
-    font-family: 'Yeseva One', cursive;
+    margin: 0px 5px;    
+    background: ${props => props.$isActive ? "linear-gradient(55deg,#ff0000, #ff7300, #fffb00);" : "black"};
+    color: #e13b91; 
+    font-family: 'Roboto Serif', sans-serif;
+    font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
-    position: relative;
    
 &:before {
     content: '';
@@ -81,26 +80,13 @@ background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #ff0000);
     border-radius: 10px;
 }
 
-&.success {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 5px;
-}
+
 `;
 
 export default function Beatsplayer() {
     const [activeSound, setActiveSound] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(null);
+    const [isActive, setIsActive] = useState(false); 
 
     const createSound = (beat: string) => {
         return new Howl({
@@ -111,15 +97,24 @@ export default function Beatsplayer() {
         });
     }
 
-    const handleClick = (beat: string) => {
-        if (activeSound) {
-            activeSound.stop();
-        }
-        const newSound = createSound(beat);
-        newSound.play();
-        setActiveSound(newSound);
-    };
+    const handleClick = (beat: string, index: number ) => {
 
+        if (activeIndex === isActive){
+            setIsActive(!isActive);
+        }
+
+
+        if (activeSound) {
+            activeSound.stop(); 
+        } 
+
+        if (activeIndex !== index) {
+            const newSound = createSound(beat);
+            newSound.play();
+            setActiveSound(newSound);
+        }
+        setActiveIndex(index);
+    };
     return (
         <Container>
             <Title>
@@ -128,7 +123,7 @@ export default function Beatsplayer() {
             <Grid>
                 {
                     beatsData.map((beat, index: number) => {
-                        return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
+                        return <Button key={index} $isActive={activeIndex === index} onClick={() => handleClick(beat.src, index)}>{beat.title}</Button>
                     })
                 }
             </Grid>
