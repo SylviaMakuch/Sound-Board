@@ -12,7 +12,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  margin-top: 20px; 
+  margin: 10px;
   justify-items: center;
 /* @media(max-height: 800px) {
     grid-template-columns: repeat(1, 1fr);
@@ -22,7 +22,7 @@ const Grid = styled.div`
 const Title = styled.div`
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
-    color: limegreen;
+    color: #19bd19;
 `;
 
 const Button = styled.button`
@@ -95,7 +95,7 @@ color: black;
 }
 `;
 
-export default function MediaPlayer() {
+export default function MediaPlayer(beat, index: number) {
     const [activeSound, setActiveSound] = useState(null);
 
     const createSound = (beat: string) => {
@@ -123,9 +123,11 @@ export default function MediaPlayer() {
                 {
                     melodyData.map((beat, index: number) => {
                         return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
+                    
                     })
                 }
             </Grid>
+            <h1>{beat.title}</h1>
         </Container>
     )
 };

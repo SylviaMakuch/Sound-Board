@@ -12,7 +12,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  margin-top: 20px; 
+  margin: 10px;
   /* @media(max-height: 800px) {
     grid-template-columns: repeat(2, 1fr);
     } */
@@ -34,7 +34,7 @@ const Button = styled.button<{ $isActive?: boolean }>`
     border-radius: 10px;
     cursor: pointer;
      
-    /* &:before {
+    &:before {
         content: '';
         background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
         position: absolute;
@@ -83,13 +83,13 @@ const Button = styled.button<{ $isActive?: boolean }>`
         opacity: 0;
         transition: opacity .3s ease-in-out;
         border-radius: 5px;
-    } */
+    }
 `;
 
 export default function BassPlayer() {
     const [activeSound, setActiveSound] = useState(null);
     const [activeIndex, setActiveIndex] = useState(null);
-    const [isActive, setIsActive] =useState(false); 
+    const [isActive, setIsActive] = useState(false); 
 
     const createSound = (beat: string) => {
         return new Howl({
@@ -101,11 +101,11 @@ export default function BassPlayer() {
     }
 
     const handleClick = (beat: string, index: number ) => {
-        const ButtonChange = setIsActive(!isActive);
+            // setIsActive(!isActive);
             
         if (activeSound) {
             activeSound.stop(); 
-        }
+        } 
 
         if (activeIndex !== index) {
             const newSound = createSound(beat);

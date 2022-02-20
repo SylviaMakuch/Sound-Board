@@ -12,7 +12,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);  
-  margin-top: 20px;
+  margin: 10px;
   /* @media(max-height: 800px) {
     grid-template-columns: repeat(1, 1fr);
     } */
