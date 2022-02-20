@@ -23,18 +23,15 @@ const Title = styled.div`
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
     color: #19bd19;
-    /* text-shadow: 1px 1px #aeffca; */
-    @media(max-width: 600px) {
     text-align: center; 
-    }  
 `;
 
 const Button = styled.button<{ $isActive?: boolean }>`
     height: 80px;
     width: 80px;
     margin: 0px 5px;    
-    background: ${props => props.$isActive ? "linear-gradient(55deg,#ff0000, #ff7300, #fffb00);" : "black"};
-    color: #e13b91; 
+    background: ${props => props.$isActive ? "linear-gradient(55deg,(45deg,  #06ff93, #fffb00, #48ff00, #00ffd5);" : "black"};
+    color: #00ff8b;
     font-family: 'Roboto Serif', sans-serif;
     font-weight: 600;
     border-radius: 10px;
@@ -113,7 +110,6 @@ export default function MelodyPlayer(beat, index: number) {
             volume: 0.5
         });
     }
-
     const handleClick = (beat: string, index: number ) => {
 
         if (activeIndex === isActive){
@@ -134,6 +130,7 @@ export default function MelodyPlayer(beat, index: number) {
     };
     return (
         <Container>
+
             <Title>Melody</Title>
             <Grid>
                 {
@@ -143,7 +140,6 @@ export default function MelodyPlayer(beat, index: number) {
                     })
                 }
             </Grid>
-            <h1>{beat.title}</h1>
         </Container>
     )
 };

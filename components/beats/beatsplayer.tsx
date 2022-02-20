@@ -21,18 +21,16 @@ const Grid = styled.div`
 const Title = styled.div`
     font-family: 'Yeseva One', cursive;
     font-size: 30px;
-    color: ff7300;
+    color: #ff36f8; 
     text-shadow: 1px 1px #fffcf;
-    @media(max-width: 600px) {
     text-align: center; 
-    }
 `;
 const Button = styled.button<{ $isActive?: boolean }>`
     height: 80px;
     width: 80px;
-    margin: 0px 5px;    
-    background: ${props => props.$isActive ? "linear-gradient(55deg,#ff0000, #ff7300, #fffb00);" : "black"};
-    color: #e13b91; 
+    margin: 0px 5px; 
+    background: ${props => props.$isActive ? "linear-gradient(55deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);" : "black"};
+    color: #ff36f8; 
     font-family: 'Roboto Serif', sans-serif;
     font-weight: 600;
     border-radius: 10px;
@@ -40,7 +38,7 @@ const Button = styled.button<{ $isActive?: boolean }>`
    
 &:before {
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, #ff00d9, #f7e3d3, #ffb9df,#ffb9df #ff00e1);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -57,7 +55,7 @@ const Button = styled.button<{ $isActive?: boolean }>`
 
 &:focus {
 color: black;
-background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #ff0000);
+background: linear-gradient(45deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);
 }
 
 &:focus:after {

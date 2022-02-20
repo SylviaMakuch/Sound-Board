@@ -5,14 +5,20 @@ import Beatsplayer from "./beats/beatsplayer";
 import BeatsPlayer from "./beats/beatsplayer";
 import MelodyPlayer from "./melody/melodyplayer";
 
+
+const Page = styled.div`
+    display: flex;
+    justify-content: center;
+    align-content: center;
+`
 const Container = styled.div`
     display: flex;
     flex-direction: row-reverse;
     background: linear-gradient(45deg, #837373, #78716a, #ffd0d0, #78716a, #000000 );
     width: 1100px;
     padding: 30px;
-    margin: 40px;
-    box-shadow: 12px 12px 12px 12px rgba(0, 0, 255, .2);
+        margin: 40px;
+    box-shadow: 12px 12px 12px 12px #0000ff3b;
     flex-wrap: wrap;    
     @media(max-width: 1120px) {
         justify-content: center;
@@ -21,6 +27,7 @@ const Container = styled.div`
         height: 1500px;
     }
 `;
+
 
 const Title = styled.div`
    font-family: 'Rock Salt', cursive;
@@ -33,12 +40,6 @@ const Title = styled.div`
         font-size: 25px; 
     }
     @media(max-width: 1120px) {
-        top: 25px;
-        left: 250px;
-        font-size: 35px;
-        transform: rotate(-35deg);
-    }
-    @media(max-width: 600px) {
         top: 25px;  
         left: 20px;
         font-size: 35px;
@@ -48,11 +49,13 @@ const Title = styled.div`
 
 export default function MusicBox() {
     return (
-        <Container>
-            <MelodyPlayer />
-            <BassPlayer />
-            <Beatsplayer />
-            <Title>Sylvia's Sound</Title>
-        </Container>
+        <Page>
+            <Container>
+                <MelodyPlayer />
+                <BassPlayer />
+                <Beatsplayer />
+                <Title>Sylvia's Sound</Title>
+            </Container>
+        </Page>
     )
 };
