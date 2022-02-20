@@ -13,15 +13,19 @@ const Grid = styled.div`
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);  
   margin: 10px;
-  /* @media(max-height: 800px) {
-    grid-template-columns: repeat(1, 1fr);
-    } */
+  @media(max-width: 1120px) {
+    grid-template-columns: repeat(4, 1fr);  
+    }
 `;
 
 const Title = styled.div`
     font-family: 'Yeseva One', cursive;
     font-size: 30px;
     color: ff7300;
+    text-shadow: 1px 1px #fffcf;
+    @media(max-width: 600px) {
+    text-align: center; 
+    }
 `;
 
 const Button = styled.button`

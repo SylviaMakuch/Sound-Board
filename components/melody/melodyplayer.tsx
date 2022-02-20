@@ -14,15 +14,19 @@ const Grid = styled.div`
   grid-auto-rows: minmax(100px, auto);
   margin: 10px;
   justify-items: center;
-/* @media(max-height: 800px) {
-    grid-template-columns: repeat(1, 1fr);
-    }   */
+  @media(max-width: 1120px) {
+    grid-template-columns: repeat(4, 1fr);  
+    }  
 `;
 
 const Title = styled.div`
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
     color: #19bd19;
+    text-shadow: 1px 1px #aeffca;
+    @media(max-width: 600px) {
+    text-align: center; 
+    }  
 `;
 
 const Button = styled.button`
@@ -123,7 +127,7 @@ export default function MediaPlayer(beat, index: number) {
                 {
                     melodyData.map((beat, index: number) => {
                         return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
-                    
+
                     })
                 }
             </Grid>

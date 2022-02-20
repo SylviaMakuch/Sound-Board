@@ -13,25 +13,37 @@ const Container = styled.div`
     padding: 30px;
     margin: 40px;
     box-shadow: 12px 12px 12px 12px rgba(0, 0, 255, .2);
-    /* @media(max-height: 800px) {
+    flex-wrap: wrap;    
+    @media(max-width: 1120px) {
+        justify-content: center;
         width: 500px;
         flex-direction: row;
         height: 1500px;
-    } */
+    }
 `;
 
 const Title = styled.div`
    font-family: 'Rock Salt', cursive;
    color: magenta;
    font-size: 35px; 
-   transform: rotate(-15deg);
-   position: relative;
-    top: 300px;
-    left: 50px;
-    /* @media(min-height: 800px) {
-        top: 1300px;
-        left:60px;
-    } */
+   transform: rotate(15deg);
+    position: relative;
+    right: 800px;
+    @media(max-width: 1210px) {
+        font-size: 25px; 
+    }
+    @media(max-width: 1120px) {
+        top: 25px;
+        left: 250px;
+        font-size: 35px;
+        transform: rotate(-35deg);
+    }
+    @media(max-width: 600px) {
+        top: 25px;  
+        left: 20px;
+        font-size: 35px;
+        transform: rotate(-35deg);
+    }
 `;
 
 export default function MusicBox() {

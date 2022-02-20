@@ -13,15 +13,19 @@ const Grid = styled.div`
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   margin: 10px;
-  /* @media(max-height: 800px) {
-    grid-template-columns: repeat(2, 1fr);
-    } */
+  @media(max-width: 1120px) {
+    grid-template-columns: repeat(4, 1fr);
+    }
 `;
 
 const Title = styled.div`
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
     color: #ff00e1;
+    text-shadow: 1px 1px #fffcf;
+    @media(max-width: 600px) {
+    text-align: center; 
+    }
 `;
 
 const Button = styled.button<{ $isActive?: boolean }>`
@@ -67,8 +71,8 @@ const Button = styled.button<{ $isActive?: boolean }>`
         top: 0;
         border-radius: 10px;
     }
-
-    &:success {
+/* 
+    &:active:after {
         content: '';
         background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
         position: absolute;
@@ -83,8 +87,8 @@ const Button = styled.button<{ $isActive?: boolean }>`
         opacity: 0;
         transition: opacity .3s ease-in-out;
         border-radius: 5px;
-    }
-`;
+    } */
+`;  
 
 export default function BassPlayer() {
     const [activeSound, setActiveSound] = useState(null);
