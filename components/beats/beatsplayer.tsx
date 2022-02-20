@@ -22,7 +22,6 @@ const Title = styled.div`
     font-family: 'Yeseva One', cursive;
     font-size: 30px;
     color: #ff36f8; 
-    text-shadow: 1px 1px #fffcf;
     text-align: center; 
 `;
 const Button = styled.button<{ $isActive?: boolean }>`
@@ -38,7 +37,7 @@ const Button = styled.button<{ $isActive?: boolean }>`
    
 &:before {
     content: '';
-    background: linear-gradient(45deg, #ff00d9, #f7e3d3, #ffb9df,#ffb9df #ff00e1);
+    background: linear-gradient(35deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -54,8 +53,8 @@ const Button = styled.button<{ $isActive?: boolean }>`
 }
 
 &:focus {
-color: black;
-background: linear-gradient(45deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);
+    color: black;
+    background: linear-gradient(45deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);
 }
 
 &:focus:after {
@@ -76,10 +75,10 @@ background: linear-gradient(45deg, #ff00e1, #ffb9df,#ffb9df, #ff00cc);
     left: 0;
     top: 0;
     border-radius: 10px;
-}
-
-
-`;
+    @media(max-width: 1200px){
+        height: 1700px;
+    }
+}`;
 
 export default function Beatsplayer() {
     const [activeSound, setActiveSound] = useState(null);
@@ -90,7 +89,7 @@ export default function Beatsplayer() {
         return new Howl({
             src: beat,
             autoplay: false,
-            loop: true,
+            loop: false,
             volume: 0.5
         });
     }
@@ -115,9 +114,7 @@ export default function Beatsplayer() {
     };
     return (
         <Container>
-            <Title>
-                Beats
-            </Title>
+            <Title> Beats </Title>
             <Grid>
                 {
                     beatsData.map((beat, index: number) => {

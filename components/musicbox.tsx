@@ -6,19 +6,19 @@ import BeatsPlayer from "./beats/beatsplayer";
 import MelodyPlayer from "./melody/melodyplayer";
 import music from "./../sounds/music.svg";
 
-
 const Page = styled.div`
     display: flex;
     justify-content: center;
     align-content: center;
-`
+`;
+
 const Container = styled.div`
     display: flex;
     flex-direction: row-reverse;
     background: linear-gradient(45deg, #837373, #78716a, #ffd0d0, #78716a, #000000 );
     width: 1100px;
     padding: 30px;
-        margin: 40px;
+    margin: 40px;
     box-shadow: 12px 12px 12px 12px #0000ff3b;
     flex-wrap: wrap;    
     @media(max-width: 1120px) {
@@ -32,8 +32,7 @@ const Container = styled.div`
 const Img = styled.img`
     width: 100px;
     margin: 30px;
-`
-
+`;
 
 const Title = styled.div`
    font-family: 'Rock Salt', cursive;

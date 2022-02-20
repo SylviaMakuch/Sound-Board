@@ -20,18 +20,17 @@ const Grid = styled.div`
 `;
 
 const Title = styled.div`
-    font-family: Yeseva One, sans-serif;
+    font-family: 'Yeseva One', cursive;
     font-size: 30px;
     color: #19bd19;
     text-align: center; 
 `;
-
 const Button = styled.button<{ $isActive?: boolean }>`
     height: 80px;
     width: 80px;
-    margin: 0px 5px;    
-    background: ${props => props.$isActive ? "linear-gradient(55deg,(45deg,  #06ff93, #fffb00, #48ff00, #00ffd5);" : "black"};
-    color: #00ff8b;
+    margin: 0px 5px; 
+    background: ${props => props.$isActive ? "background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);" : "black"};
+    color: #48ff00; 
     font-family: 'Roboto Serif', sans-serif;
     font-weight: 600;
     border-radius: 10px;
@@ -39,7 +38,7 @@ const Button = styled.button<{ $isActive?: boolean }>`
    
 &:before {
     content: '';
-    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -55,11 +54,12 @@ const Button = styled.button<{ $isActive?: boolean }>`
 }
 
 &:focus {
-    background: linear-gradient(45deg,  #06ff93, #fffb00, #48ff00, #00ffd5);
     color: black;
+    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);
 }
+
 &:focus:after {
-    background: transparent;
+    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);
 }
 
 &:hover:before {
@@ -72,18 +72,19 @@ const Button = styled.button<{ $isActive?: boolean }>`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);
     left: 0;
     top: 0;
     border-radius: 10px;
-}
+    @media(max-width: 1200px){
+        height: 1700px;
+    }
+}`;
 
-`;
-
-export default function MelodyPlayer() {
+export default function Melodyplayer() {
     const [activeSound, setActiveSound] = useState(null);
     const [activeIndex, setActiveIndex] = useState(null);
-    const [isActive, setIsActive] = useState(false);
+    const [isActive, setIsActive] = useState(false); 
 
     const createSound = (beat: string) => {
         return new Howl({
@@ -93,16 +94,17 @@ export default function MelodyPlayer() {
             volume: 0.5
         });
     }
-    const handleClick = (beat: string, index: number) => {
 
-        if (activeIndex === isActive) {
+    const handleClick = (beat: string, index: number ) => {
+
+        if (activeIndex === isActive){
             setIsActive(!isActive);
         }
 
 
         if (activeSound) {
-            activeSound.stop();
-        }
+            activeSound.stop(); 
+        } 
 
         if (activeIndex !== index) {
             const newSound = createSound(beat);
@@ -113,8 +115,7 @@ export default function MelodyPlayer() {
     };
     return (
         <Container>
-
-            <Title>Melody</Title>
+            <Title> Beats </Title>
             <Grid>
                 {
                     melodyData.map((beat, index: number) => {

@@ -76,9 +76,10 @@ const Button = styled.button<{ $isActive?: boolean }>`
     left: 0;
     top: 0;
     border-radius: 10px;
-}
-
-`;
+    @media(max-width: 1200px){
+        height: 1700px;
+    }
+}`;
 
 export default function BassPlayer() {
     const [activeSound, setActiveSound] = useState(null);
