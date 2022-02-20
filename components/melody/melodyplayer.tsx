@@ -29,16 +29,16 @@ const Title = styled.div`
     }  
 `;
 
-const Button = styled.button`
+const Button = styled.button<{ $isActive?: boolean }>`
     height: 80px;
     width: 80px;
-    background: #111;
-    color: limegreen; 
+    margin: 0px 5px;    
+    background: ${props => props.$isActive ? "linear-gradient(55deg,#ff0000, #ff7300, #fffb00);" : "black"};
+    color: #e13b91; 
     font-family: 'Roboto Serif', sans-serif;
     font-weight: 600;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
-    position: relative;
    
 &:before {
     content: '';
@@ -100,8 +100,10 @@ color: black;
 }
 `;
 
-export default function MediaPlayer(beat, index: number) {
+export default function MelodyPlayer(beat, index: number) {
     const [activeSound, setActiveSound] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(null);
+    const [isActive, setIsActive] = useState(false); 
 
     const createSound = (beat: string) => {
         return new Howl({
@@ -112,22 +114,31 @@ export default function MediaPlayer(beat, index: number) {
         });
     }
 
-    const handleClick = (beat: string) => {
-        if (activeSound) {
-            activeSound.stop();
-        }
-        const newSound = createSound(beat);
-        newSound.play();
-        setActiveSound(newSound);
-    };
+    const handleClick = (beat: string, index: number ) => {
 
+        if (activeIndex === isActive){
+            setIsActive(!isActive);
+        }
+
+
+        if (activeSound) {
+            activeSound.stop(); 
+        } 
+
+        if (activeIndex !== index) {
+            const newSound = createSound(beat);
+            newSound.play();
+            setActiveSound(newSound);
+        }
+        setActiveIndex(index);
+    };
     return (
         <Container>
             <Title>Melody</Title>
             <Grid>
                 {
                     melodyData.map((beat, index: number) => {
-                        return <Button key={index} onClick={() => handleClick(beat.src)}>{beat.title}</Button>
+                        return <Button key={index} $isActive={activeIndex === index} onClick={() => handleClick(beat.src, index)}>{beat.title}</Button>
 
                     })
                 }
