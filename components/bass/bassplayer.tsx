@@ -21,7 +21,7 @@ const Grid = styled.div`
 const Title = styled.div`
     font-family: Yeseva One, sans-serif;
     font-size: 30px;
-    color: #ffa51b; 
+    color: #f4bc69; 
     text-shadow: 1px 1px #fffcf;
     text-align: center; 
 `;
