@@ -120,7 +120,7 @@ export default function BassPlayer() {
             <Grid>
                 {
                     bassData.map((beat, index: number) => {
-                        return <Button key={index} $isActive={isActive} onClick={() => handleClick(beat.src,index)}>{beat.title}</Button>
+                        return <Button key={index} $isActive={isActive} onClick={() => handleClick(beat.src, index)}>{beat.title}</Button>
                     })
                 }
             </Grid>
