@@ -36,7 +36,6 @@ const Button = styled.button<{ $isActive?: boolean }>`
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 1px #ffd900e1;
      
     &:before {
     content: '';
@@ -55,11 +54,11 @@ const Button = styled.button<{ $isActive?: boolean }>`
     border-radius: 5px;
 }
 
-    &:focus {
-        color: black;
-        background: linear-gradient(55deg,#ff0000, #ff7300, #fffb00);
-    }
-    &:focus:after {
+&:focus {
+    color: black;
+    background: linear-gradient(55deg,#ff0000, #ff7300, #fffb00);
+}
+&:focus:after {
     background: transparent;
 }
 

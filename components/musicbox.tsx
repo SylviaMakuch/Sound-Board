@@ -4,6 +4,7 @@ import BassPlayer from "./bass/bassplayer";
 import Beatsplayer from "./beats/beatsplayer";
 import BeatsPlayer from "./beats/beatsplayer";
 import MelodyPlayer from "./melody/melodyplayer";
+import music from "./../sounds/music.svg";
 
 
 const Page = styled.div`
@@ -28,6 +29,11 @@ const Container = styled.div`
     }
 `;
 
+const Img = styled.img`
+    width: 100px;
+    margin: 30px;
+`
+
 
 const Title = styled.div`
    font-family: 'Rock Salt', cursive;
@@ -43,7 +49,7 @@ const Title = styled.div`
         top: 25px;  
         left: 20px;
         font-size: 35px;
-        transform: rotate(-35deg);
+        transform: rotate(-5deg);
     }
 `;
 
@@ -54,6 +60,7 @@ export default function MusicBox() {
                 <MelodyPlayer />
                 <BassPlayer />
                 <Beatsplayer />
+                <Img src={music} />
                 <Title>Sylvia's Sound</Title>
             </Container>
         </Page>
