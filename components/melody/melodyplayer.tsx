@@ -107,12 +107,6 @@ export default function Melodyplayer() {
             activeSound.stop();           
         } 
 
-        if (!activeSound && activeIndex === isActive) {
-            const newSound = createSound(beat);
-            newSound.play();
-            setActiveSound(newSound);
-        }
-
         if (activeIndex !== index) {
             const newSound = createSound(beat);
             newSound.play();
