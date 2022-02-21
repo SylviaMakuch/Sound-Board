@@ -99,6 +99,7 @@ export default function BassPlayer() {
 
         if (activeIndex === isActive) {
             setIsActive(!isActive);
+            activeSound.play();
         }
 
 

@@ -29,20 +29,21 @@ const Button = styled.button<{ $isActive?: boolean }>`
     height: 80px;
     width: 80px;
     margin: 0px 5px; 
-    background: ${props => props.$isActive ? "background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);" : "black"};
-    color: #48ff00; 
+    background: ${props => props.$isActive ? "linear-gradient(55deg, #48ff00, #fffb00, #00ffd5);" : "black"};
+    color: #19bd19; 
     font-family: 'Roboto Serif', sans-serif;
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
-   
-&:before {
+     
+    &:before {
     content: '';
-    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);
+    color: black;
+    background: linear-gradient(45deg, #48ff00, #fffb00, #00ffd5);
     position: absolute;
     top: -2px;
     left:-2px;
-    background-size: 400%;
+    background-size : 400%;
     z-index: -1;
     filter: blur(5px);
     width: calc(100% + 4px);
@@ -55,11 +56,10 @@ const Button = styled.button<{ $isActive?: boolean }>`
 
 &:focus {
     color: black;
-    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);
+    background: linear-gradient(55deg,  #48ff00, #fffb00, #00ffd5);
 }
-
 &:focus:after {
-    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);
+    background: transparent;
 }
 
 &:hover:before {
@@ -72,7 +72,7 @@ const Button = styled.button<{ $isActive?: boolean }>`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #06ff93, #fffb00, #48ff00, #00ffd5);
+    background: transparent;
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -90,21 +90,28 @@ export default function Melodyplayer() {
         return new Howl({
             src: beat,
             autoplay: false,
-            loop: false,
+            loop: true,
             volume: 0.5
         });
     }
 
     const handleClick = (beat: string, index: number ) => {
 
-        if (activeIndex === isActive){
+        if (activeIndex === isActive) {
             setIsActive(!isActive);
+            activeSound.play();
         }
 
 
         if (activeSound) {
-            activeSound.stop(); 
+            activeSound.stop();           
         } 
+
+        if (!activeSound && activeIndex === isActive) {
+            const newSound = createSound(beat);
+            newSound.play();
+            setActiveSound(newSound);
+        }
 
         if (activeIndex !== index) {
             const newSound = createSound(beat);
@@ -112,10 +119,10 @@ export default function Melodyplayer() {
             setActiveSound(newSound);
         }
         setActiveIndex(index);
-    };
+    }
     return (
         <Container>
-            <Title> Beats </Title>
+            <Title> Melody </Title>
             <Grid>
                 {
                     melodyData.map((beat, index: number) => {

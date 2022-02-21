@@ -1,11 +1,14 @@
 {
+  "homepage": "https://github.com/SylviaMakuch/Sound-Board",  
   "name": "sylvias-soundboard",
   "version": "0.0.1",
   "description": "Sound Board online!",
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --config webpack.config.dev.js",
-    "build": "webpack --config webpack.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Sylvia Makuch",
   "dependencies": {
