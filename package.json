@@ -1,6 +1,6 @@
 {
-  "homepage": "https://github.com/SylviaMakuch/Sound-Board",  
-  "name": "sylvias-soundboard",
+  "homepage": "https://github.com/SylviaMakuch/Sound-Board",
+  "name": "sound-board",
   "version": "0.0.1",
   "description": "Sound Board online!",
   "main": "index.js",
@@ -36,6 +36,7 @@
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.5.1",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "typescript": "^4.4.4",
