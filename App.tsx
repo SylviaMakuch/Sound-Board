@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import styled from "styled-components";
 import "@fontsource/rock-salt";
 import "@fontsource/yeseva-one";
-import MusicBox from "./components/musicbox";
+import MusicBox from "./src/components/musicbox";
 
 const Container = styled.div`
   display:flex;

@@ -3,7 +3,7 @@
   "name": "sound-board",
   "version": "0.0.1",
   "description": "Sound Board online!",
-  "main": "index.js",
+  "private": false,
   "scripts": {
     "dev": "webpack serve --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
